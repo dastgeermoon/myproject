@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+    
+    </head>
+<body onload="form1.text1.focus()">
+
+
+<div id="top"><h3 style="color:black;">JS By Moon</h3></div>
+<div id="content">
+
+<div id="div_str"><span style=text-align:center;>S T R I N G</span>
+<center>
+		<hr>
+		<form name=form1>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr><td>Name</td> <td><input type=text name=text1 size=15 value="" onkeypress="return ischarKey(event)"></td></tr>
+		<tr><td>City</td> <td><input type=text name=text2 size=15 value="" onkeypress="return ischarKey(event)"></td></tr>
+		<tr><td>Result</td><td><input type=text name=text3 size=15 value="" disabled></td></tr>
+		</table>
+		<hr>
+		<input class="button" type=button name=command1 value="Alltrim"
+onclick="form1.text3.value=trim(form1.text1.value)"><br>
+		<input class="button" type=button name=command2 value="Upper" onclick="form1.text3.value=form1.text1.value.toUpperCase()"><br>
+		<input class="button" type=button name=command3 value="Lower"
+onclick="form1.text3.value=form1.text1.value.toLowerCase()"><br>
+		<input class="button" type=button name=command4 value="Length"
+onclick="form1.text3.value=form1.text1.value.length"><br>
+		<input class="button" type=button name=command5 value="Substr"><br>
+		<input class="button" type=button name=command6 value="Join"
+onclick="form1.text3.value=form1.text1.value +' ' + form1.text2.value"><br>
+		<input class="button" type=button name=command7 value="At"><br><br>
+		<input class="button" type=button name=command8 value="Focus" onclick="form1.text1.select();form1.text1.focus()"><br>
+		<input class="button" type=reset name=command9 value="Reset">
+		</form>
+</center>
+</div>
+
+<div id="div_num"><span style=text-align:center;>N U M E R I C</span>
+<center>
+		<hr>
+		<form name=form2>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr><td>Amount</td> <td><input type=text name=text1 size=15 value="" onkeypress="return isNumberKey(event)"; onblur="form2.text1.value=formatCurrency(form2.text1.value)"></td></tr>
+		<tr><td>Tax</td> <td><input type=text name=text2 size=15 value=""
+onkeypress="return isNumberKey(event)"></td></tr>
+		<tr><td>Result</td><td><input type=text name=text3 size=15 value="" disabled></td></tr>
+		</table>
+		<hr>
+		<input class="button" type=button name=command1 value="Plus" onclick="form2.text3.value=eval(form2.text1.value)+eval(form2.text2.value)"><br>
+
+		<input class="button" type=button name=command2 value="Minus"
+onclick="form2.text3.value=eval(form2.text1.value)-eval(form2.text2.value)"><br>
+
+		<input class="button" type=button name=command3 value="Round"
+onclick="round1()"><br>
+		<input class="button" type=button name=command4 value="Decimal"><br>
+
+		<input class="button" type=button name=command5 value="Comma" Onclick="form2.text3.value=addCommas(form2.text1.value)"><br>
+
+		<input class="button" type=button name=command6 value="Currency"
+onclick="form2.text3.value=formatCurrency(form2.text1.value)"><br>
+		<input class="button" type=button name=command7 value="If" onclick="iif()"><br><br>
+		<input class="button" type=button name=command8 value="Focus" onclick="form2.text1.select()";"form2.text1.focus()"><br>
+		<input class="button" type=reset name=command9 value="Reset">
+		</form>
+</center>
+</div>
+
+</div>
+
+</body>
+</html>
+
